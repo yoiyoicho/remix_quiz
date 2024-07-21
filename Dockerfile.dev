@@ -1,0 +1,12 @@
+FROM node:22
+
+ENV APP /app
+WORKDIR $APP
+COPY . $APP
+
+RUN npm install
+RUN npm rebuild
+
+EXPOSE 5173
+
+CMD ["npm", "run", "dev"]
