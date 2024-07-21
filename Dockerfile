@@ -1,0 +1,8 @@
+FROM node:22
+
+ENV APP /app
+WORKDIR $APP
+
+COPY . $APP
+
+EXPOSE 5173
