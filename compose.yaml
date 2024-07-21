@@ -1,9 +1,0 @@
-version: "3"
-services:
-  remix_quiz:
-    build: .
-    ports:
-      - 5173:5173
-    volumes:
-      - .:/app
-    command: /bin/sh -c "cd /app; npm run dev;"
