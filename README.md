@@ -5,10 +5,12 @@
 - `docker run -p 5173:5173 -v $(pwd):/app remix-quiz-dev`
 
 - prod にデプロイするとき
-- `docker build -f Dockerfile.prod --platform=linux/amd64 --no-cache -t [account_id].dkr.ecr.ap-northeast-1.amazonaws.com/remix_quiz:[version] .`
-- `aws sso login --profile mina-admin`
-- `aws ecr get-login-password --region ap-northeast-1 --profile mina-admin | docker login --username AWS --password-stdin [account_id].dkr.ecr.ap-northeast-1.amazonaws.com`
-- `docker push [account_id].dkr.ecr.ap-northeast-1.amazonaws.com/remix_quiz:[version]`
+- `export AWS_ACCESS_KEY_ID=`
+- `export AWS_SECRET_ACCESS_KEY=`
+- `export AWS_SESSION_TOKEN=`
+- `cd terraform`
+- `terraform plan`
+- `terraform apply`
 
 # Welcome to Remix!
 
